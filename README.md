@@ -8,8 +8,8 @@ Very simple to use. Working example here https://serverwind.github.io/FootNotes.
 
 # Install
 
-1. Add https://serverwind.github.io/src/styles/style.css
-2. Add https://serverwind.github.io/src/footnotes.js
+1. Add https://serverwind.github.io/FootNotes/src/styles/style.css
+2. Add https://serverwind.github.io/FootNotes/src/footnotes.js
 
 # Use
 
@@ -27,7 +27,7 @@ If you need a list of all your footnotes in the end of your article - add this:
 
 <pre>
     &lt;div align="right" style="margin-bottom: 25px;"&gt;
-      &lt;span class="spoiler-name"&gt;&lt;i style="color: white;font-size: 16px;" id="spoiler-arrow" class='fa fa-chevron-down'&gt;&lt;/i&gt; Сноски&lt;/span&gt;
+      &lt;span class="spoiler-name"&gt;&lt;i style="color: white;font-size: 16px;" id="spoiler-arrow" class='fa fa-chevron-down'&gt;&lt;/i&gt; Footnotes&lt;/span&gt;
     &lt;/div&gt;
     &lt;ol id="spoiler" class="spoilerHidden"&gt;
       &lt;li id="note1"&gt;&lt;/li&gt;
