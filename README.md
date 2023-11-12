@@ -4,8 +4,7 @@ Lightweight (4kb) script on pure JS, what creates footnotes in your article, and
 
 Very simple to use. Working example here https://serverwind.github.io/FootNotes.JS/dist , click on [1], [2] etc.
 
-<b>DEMO</b>: <a href="https://serverwind.github.io/dist
-">Example</a>
+<b>DEMO</b>: <a href="https://serverwind.github.io/FootNotes.JS/dist">Example</a>
 
 # Install
 
