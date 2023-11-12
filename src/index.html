@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>FootNotes.JS by Alex Lestra</title>
+    <style>
+      pre {
+        overflow-x: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>FootNotes.JS</h1>
+      <p>
+        <b>FootNotes.JS</b> - это скрипт, разработанный специально для авторов, которые хотят в своих статьях сделать что то вроде сносок, как это делается в книгах в конце страницы. По тексту здесь будут разбросаны такие "[1]" ссылки, это и есть FootNotes<span class="tooltip-link tp1"><sup>[1]</sup></span> <span class="tooltip-hide toolTip increment" id="1"><b>1</b> <a href="#note1">Привет, я FootNotes.JS!</a><span class="closeTooltip">x</span></span
+        >. Покликайте, чтобы посмотреть как он работает.
+      </p>
+
+      <h2>Преимущества FootNotes.JS</h2>
+      <ul>
+        <li>
+          Скрипт написан полностью на чистом JavaScript<span class="tooltip-link tp2"><sup>[2]</sup></span
+          ><span class="tooltip-hide toolTip increment" id="2"><b>2</b> <a href="#note2">Это ведь круто, да? Я всегда стремился к улучшению производительности.</a><span class="closeTooltip">x</span></span
+          >, без использования jQuery и прочих библиотек.
+        </li>
+        <li>
+          Размер скрипта всего <b>4kb</b>. Вес может быть уменьшен, если в стандартных 10 сносках на страницу нет необходимости<span class="tooltip-link tp3"><sup>[3]</sup></span
+          ><span class="tooltip-hide toolTip increment" id="3"><b>3</b> <a href="#note3">По дефолту скрипт поддерживает 10 сносок на 1 станице, но если нужно, это количество легко увеличить, пишите мне на мыло если не справитесь сами!</a><span class="closeTooltip">x</span></span> и вы можете обойтись меньшим количеством.
+        </li>
+        <li>
+          Простота использования<span class="tooltip-link tp4"><sup>[4]</sup></span
+          ><span class="tooltip-hide toolTip increment" id="4"><b>4</b> <a href="#note4">Справился бы даже ваш кот ;)</a><span class="closeTooltip">x</span></span
+          >. Достаточно вставить HTML разметку в нужное место, и прописать текст сноски.
+        </li>
+        <li>Стиль сноски адаптивен и не будет уезжать за пределы экрана на экранах мобильных устройств.</li>
+        <li>
+          Автоматизация<span class="tooltip-link tp5"><sup>[5]</sup></span
+          ><span class="tooltip-hide toolTip increment" id="5"><b>5</b> <a href="#note5">99%. Кое что всё таки сделать придется.</a><span class="closeTooltip">x</span></span
+          >. Скрипт сам проставит номера сносок, в зависимости от порядка на странице. Помимо этого он сам составит список всех сносок в конце страницы.
+        </li>
+        <li>Может быть использован для создания обычных тултипов или всплывающих окон.</li>
+      </ul>
+
+      <h2>Установка</h2>
+      <ol>
+        <li>
+          Подключить CSS стиль <b><a href="../../css/proj/footNotes.css">footNotes.css</a></b> в шапке сайта.
+        </li>
+        <li>
+          Подключить скрипт <b><a href="../../js/proj/footNotes.js">footNotes.js</a></b> как обычно, перед закрывающим тегом &lt;/body&gt;
+        </li>
+        <li>
+          Рекомендуется, но не обязательно, также подключить библиотеку <b><a href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">fontawesome</a></b> (для отображения стрелочки на кнопке "Сноски" в списке).
+        </li>
+        <i>Ссылки кликабельны.</i>
+      </ol>
+
+      <h2>Использование</h2>
+      <p>Когда все установлено, в том месте, где необходимо установить сноску вставляем этот код:</p>
+      <pre>
+  &lt;span class="tooltip-link"&gt;&lt;sup&gt;&lt;/sup&gt;&lt;/span&gt;
+  &lt;span class="tooltip-hide toolTip increment"&gt;&lt;b&gt;&lt;/b&gt; &lt;a href=""&gt;ТЕКСТ&lt;/a&gt;
+  &lt;span class="closeTooltip"&gt;x&lt;/span&gt;&lt;/span&gt;</pre
+      >
+
+      <p>Дальше всё что нужно, это заменить слово "ТЕКСТ" на текст вашей сноски.</p>
+
+      <p>Если вы хотите в конце вашей статьи выводить список всех сносок, добавьте туда этот код:</p>
+
+      <pre>
+    &lt;div align="right" style="margin-bottom: 25px;"&gt;
+      &lt;span class="spoiler-name"&gt;&lt;i style="color: white;font-size: 16px;" id="spoiler-arrow" class='fa fa-chevron-down'&gt;&lt;/i&gt; Сноски&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;ol id="spoiler" class="spoilerHidden"&gt;
+      &lt;li id="note1"&gt;&lt;/li&gt;
+      &lt;li id="note2"&gt;&lt;/li&gt;
+      &lt;li id="note3"&gt;&lt;/li&gt;
+      &lt;li id="note4"&gt;&lt;/li&gt;
+      &lt;li id="note5"&gt;&lt;/li&gt;
+      &lt;li id="note6"&gt;&lt;/li&gt;
+      &lt;li id="note7"&gt;&lt;/li&gt;
+      &lt;li id="note8"&gt;&lt;/li&gt;
+      &lt;li id="note9"&gt;&lt;/li&gt;
+      &lt;li id="note10"&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+      </pre>
+
+      <p>Заполнять ничего не нужно, скрипт сам всё сделает.</p>
+
+      <div align="right" style="margin-bottom: 25px">
+        <span class="spoiler-name"><i style="color: white; font-size: 16px" id="spoiler-arrow" class="fa fa-chevron-down"></i> Сноски</span>
+      </div>
+      <ol id="spoiler" class="spoilerHidden">
+        <li id="note1"></li>
+        <li id="note2"></li>
+        <li id="note3"></li>
+        <li id="note4"></li>
+        <li id="note5"></li>
+        <li id="note6"></li>
+        <li id="note7"></li>
+        <li id="note8"></li>
+        <li id="note9"></li>
+        <li id="note10"></li>
+      </ol>
+    </main>
+
+    <script src="./index.js"></script>
+
+    <footer>&#169; Alex Lestra, 2020.</footer>
+  </body>
+</html>
